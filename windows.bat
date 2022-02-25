@@ -26,9 +26,8 @@ if "%portstatus%" == "" (
    timeout 10
 )
 
-@REM set newIp=%deviceIp%:5555
-@REM adb tcpip 5555
-@REM adb connect %newIp%
-
+set newIp=%deviceIp%:%port%
+adb tcpip %port%
+adb connect %newIp%
 
 pause
